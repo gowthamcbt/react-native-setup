@@ -17,4 +17,27 @@ rm -rf ./android/app/src/mainmain/res/raw
 
  cd android && ./gradlew clean
 
- Gowthamrn4
+<b>Clear watchman watches:</b>
+ watchman watch-del-all
+ 
+<b>Remove the cache:</b>
+ rm -rf /tmp/metro-*
+ 
+<b>Delete node_modules:</b>
+ rm -rf node_modules
+ 
+<b>Install project libraries:</b>
+ npm install or yarn install
+ 
+<b>Clean & install project pods:</b>
+ cd ios && rm -rf Pods Podfile.lock && pod install
+ 
+<b>Reset Metro’s cache:</b>
+ yarn start --reset-cache
+ 
+<b>When applying new changes on Android gradle files, it deletes the build folder:</b>
+ cd android && ./gradlew clean
+
+ <b>upgrade react native</b>
+ npx @rnx-kit/align-deps --requirements react-native@0.71
+ npx @rnx-kit/align-deps --requirements react-native@0.71 --write
